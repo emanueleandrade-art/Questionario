@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#d96e9f">
+<meta name="description" content="Diagnóstico e plano de melhoria da Escola Estadual Heloíza Therezinha Murbach Lacava (Atividade de Extensão III, FAM).">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Diagnóstico Escola">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Diagnóstico e Proposta: Escola Heloiza Lacava</title>
+<style>
+:root{--pink:#e98db6;--pink2:#fff0f6;--lilac:#eee9ff;--mint:#e3f6ed;--blue:#e8f3ff;--peach:#fff3e4;--ink:#3d3544;--muted:#817887;--line:#eee6ef;--white:#fff;--shadow:0 12px 35px #48354d0d;--brand:#d96e9f}
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:10}
+body{margin:0;background:#fffafd;color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit;cursor:pointer;border:0;background:#f2edf8;color:#665a70;border-radius:12px;padding:10px 15px;font-weight:750}
+button:hover{filter:brightness(.97)}.tabs button.on{background:var(--brand);color:#fff;box-shadow:0 5px 12px #d96e9f26}
+.top{background:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:4;border-bottom:1px solid var(--line);padding:13px max(18px,calc((100% - 1120px)/2));display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;min-width:0}
+.logo{width:42px;height:42px;flex:none;border-radius:15px;background:linear-gradient(135deg,#ffd7e8,#e4ddff);display:grid;place-items:center;font-size:22px}
+.brand small{display:block;color:var(--muted);font-size:12px;font-weight:500}
+.wrap{max-width:1120px;margin:auto;padding:28px 18px 60px}
+.hero{padding:30px;border-radius:26px;background:linear-gradient(120deg,#fff0f6,#f4f0ff 65%,#effaf4);margin-bottom:22px}
+.eyebrow{color:#ba5d8a;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:1.4px}
+.hero h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:9px 0 12px;max-width:780px}
+.hero p{max-width:700px;color:#746a7c;margin:0 0 16px}
+.pills{display:flex;flex-wrap:wrap;gap:9px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:99px;background:#fff;font-size:12px;font-weight:700;color:#986183}
+.notice{border-radius:14px;background:#eff7ff;border:1px solid #d8eaff;color:#45627c;padding:12px 15px;font-size:13px;margin:0 0 18px}
+.layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:18px}
+.sidebar{align-self:start;position:sticky;top:84px;background:#fff;border:1px solid var(--line);border-radius:19px;padding:10px;display:grid;gap:5px}
+.nav{display:block;padding:12px;border-radius:11px;color:#706777;font-weight:650;text-decoration:none}
+.nav.active,.nav:hover{background:var(--pink2);color:#b24e7e}
+.content{min-width:0}
+section{scroll-margin-top:84px}
+h2{font-size:20px;margin:34px 0 4px}.content>section:first-child>h2{margin-top:0}
+.lead,.sub,.muted{color:var(--muted)}.lead{margin:0 0 14px}.sub{margin:0 0 10px;font-size:13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:21px;padding:20px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 6px;font-size:1.05rem}.card p{margin:0 0 6px}.card ul{margin:0;padding-left:20px}.card li{margin:4px 0}
+.rosa{background:var(--pink2);border-color:#f6d9e7}.lilas{background:var(--lilac);border-color:#e2dbf7}
+.menta{background:var(--mint);border-color:#cdeadc}.pessego{background:var(--peach);border-color:#f6e1c4}.blue{background:var(--blue);border-color:#d8eaff}
+.grid{display:grid;gap:14px}.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.ex{color:var(--muted);font-size:.9rem}
+.formula{background:#fff;border:1px dashed var(--pink);border-radius:12px;padding:9px 12px;margin:8px 0;font-weight:700;font-size:.88rem;text-align:center}
+.formula hr{border:0;border-top:2px solid var(--ink);margin:6px 24px}
+.big{font-size:44px;font-weight:800;line-height:1.1;color:#b24e7e}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.step{border-radius:16px;padding:12px 6px;text-align:center;position:relative;border:2px solid transparent;font-weight:800}
+.step b{display:block;font-size:26px}.step span{font-size:13px;display:block;line-height:1.25}
+.step.on{background:#fff;border-color:var(--brand);color:var(--ink)}
+.step.crit::after{content:"ponto crítico";position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#b74e5b;color:#fff;font-size:10px;padding:1px 8px;border-radius:99px;white-space:nowrap}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.dores,.props{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+details.dor{border:1px solid var(--line);border-left:7px solid var(--c,#e98db6);border-radius:16px;padding:13px 15px}
+details.dor.rosa{--c:#e98db6}details.dor.lilas{--c:#a995e6}details.dor.menta{--c:#6fc4a0}details.dor.pessego{--c:#e0a35f}details.dor.blue{--c:#7fb6ea}
+details.dor summary{cursor:pointer;font-weight:750;list-style:none;display:flex;gap:8px;justify-content:space-between;align-items:flex-start}
+details.dor summary::-webkit-details-marker{display:none}
+details.dor summary::after{content:"+";font-size:20px;line-height:1;color:#b24e7e}details.dor[open] summary::after{content:"–"}
+.tag{display:inline-block;font-size:11px;font-weight:800;color:var(--tc,#b24e7e);margin-bottom:2px}
+.dor blockquote{margin:10px 0 4px;color:#746b7b;font-size:14px;border-top:1px dashed #e6dce8;padding-top:10px}
+.dor small{color:var(--muted)}
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sw{display:block;width:100%;border-radius:21px;color:var(--ink);padding:16px;border:1px solid var(--line);text-align:left;font-weight:400;color:var(--ink);box-shadow:var(--shadow)}
+.sw h3{margin:0;font-size:1.1rem}.sw small{color:var(--muted)}
+.sw.rosa{background:var(--pink2);border-color:#f6d9e7}.sw.lilas{background:var(--lilac);border-color:#e2dbf7}.sw.menta{background:var(--mint);border-color:#cdeadc}.sw.pessego{background:var(--peach);border-color:#f6e1c4}
+.sw ul{margin:8px 0 0;padding:0;list-style:none;display:none}.sw.on ul{display:block}.sw li{margin:8px 0;font-size:14px}
+.sw .n{float:right;font-size:26px;font-weight:800;color:#b24e7e}
+.sw.on{color:var(--ink);box-shadow:0 0 0 2px #fff,0 0 0 4px #e9a0bf55}
+.imp{display:inline-block;font-size:10.5px;font-weight:800;border-radius:99px;padding:1px 9px;margin-right:6px;vertical-align:1px;background:#fde4ef;color:#a3416f}
+.imp.m{background:#f4effb;color:#77628e}.imp.b{background:#fff1dc;color:#916a2e}.imp.t{background:#fff;color:#826b8c;border:1px solid #eadff0}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:800;background:#e6f7ee;color:#39795c;margin:4px 4px 6px 0}.badge.n{background:#f4effb;color:#77628e}
+.mx{position:relative;height:340px;margin-left:22px;border-radius:21px;overflow:hidden;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;box-shadow:var(--shadow)}
+.mx .q{font-size:12px;font-weight:700;color:#7a6c85;padding:9px 12px}.mx .q:nth-child(2),.mx .q:nth-child(4){text-align:right}
+.q1{background:var(--lilac)}.q2{background:var(--pink2)}.q3{background:var(--blue)}.q4{background:var(--mint)}
+.dot{position:absolute;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;border:3px solid #fff;background:var(--c);color:#fff;font-size:19px;font-weight:800;padding:0;box-shadow:0 5px 12px #48354d30}
+.dot.on{outline:3px solid var(--ink)}
+.ax{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;margin:6px 0 0 22px}
+.ay{position:absolute;left:-26px;top:50%;transform:translateY(-50%) rotate(-90deg);font-size:12px;color:var(--muted);white-space:nowrap}
+.rank{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+.rank h3{font-size:1rem}
+.domino{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:18px;font-size:13px}
+.domino span{background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:99px}.domino i{color:#b24e7e;font-style:normal;font-weight:800}
+.w{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.w h3{font-size:1.4rem;color:#b24e7e}.w h3 small{font-size:13px;color:var(--muted);margin-left:6px}
+.kp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.obs{background:var(--peach);border:1px solid #f6e1c4;border-left:6px solid #e0a35f;border-radius:16px;padding:18px 22px;margin-top:30px}
+.obs h3{margin:0 0 6px;color:#916a2e}.obs p{margin:0 0 10px}
+.footer{text-align:center;color:#9a909e;font-size:12px;margin-top:34px}
+:focus-visible{outline:3px solid #e9a0bf;outline-offset:2px}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px;margin-top:16px}
+.fig{margin:16px 0 0;background:#fff;border:1px solid var(--line);border-radius:21px;padding:10px;box-shadow:var(--shadow)}.figs .fig{margin:0}
+.fig img{display:block;width:100%;height:auto;border-radius:14px;cursor:zoom-in}
+.fig figcaption{font-size:12.5px;color:var(--muted);padding:8px 6px 2px}
+.zoom{position:fixed;inset:0;background:#3d3544d9;z-index:50;overflow:auto;padding:calc(env(safe-area-inset-top,0px) + 56px) 12px 24px;-webkit-overflow-scrolling:touch}
+.zoom img{display:block;min-width:900px;width:100%;max-width:1400px;margin:auto;border-radius:12px;background:#fff}
+.zoom button{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;background:#fff}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.sidebar{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:22px}.wrap{padding:18px 12px 40px}.top{padding:11px 15px;position:relative;top:auto}section{scroll-margin-top:16px}.cols,.swot,.kp{grid-template-columns:1fr}.steps{gap:5px}.step span{font-size:11.5px}.mx{height:320px}}
+@media print{.top,.sidebar,.notice,.footer,button{display:none!important}body{background:#fff}.layout{display:block}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand"><div class="logo">🌷</div><div>Escola Estadual Heloíza Therezinha Murbach Lacava<small>Diagnóstico e proposta · Atividade de Extensão III · FAM</small></div></div></header>
+<div class="wrap">
+<div class="hero">
+<span class="eyebrow">Escola Estadual Heloíza Therezinha Murbach Lacava · Projeto de extensão</span>
+<h1>Diagnóstico da escola e plano de melhoria</h1>
+<p>As dores que a direção relatou, a análise do grupo (SWOT, prioridades, 5W2H) e os indicadores para acompanhar. A mensagem sai da escola, mas nem sempre chega às famílias, e isso afeta a participação e os projetos.</p>
+<div class="pills"><span class="pill">👤 Nilson Ribeiro da Silva, Diretor</span><span class="pill">👤 Carmem Maria Vasques Carrilho, Vice-Diretora</span><span class="pill">📍 Santa Bárbara d’Oeste, SP</span></div>
+</div>
+<div class="notice"><b>Fontes:</b> questionário de diagnóstico respondido pela direção e Relatório de Atividade de Extensão III, Etapa 02. Uso acadêmico.</div>
+<div class="layout">
+<aside class="sidebar" aria-label="Seções">
+<a class="nav active" href="#jornada">📬 Caminho do aviso</a><a class="nav" href="#dores">🩹 Mapa das dores</a><a class="nav" href="#swot">🧭 Análise SWOT</a><a class="nav" href="#poder">🤝 Matriz de poder</a><a class="nav" href="#prior">🎯 Prioridades</a><a class="nav" href="#w">📝 Planos 5W2H</a><a class="nav" href="#kpi">📊 KPIs</a><a class="nav" href="#prop">💡 Propostas</a>
+</aside>
+<div class="content">
+<section id="jornada"><h2>O caminho de um aviso</h2><p class="lead">Toque em cada etapa para ver o que funciona e onde a escola sente dificuldade.</p>
+<div class="steps" id="steps"></div><div class="cols" id="stageBody"></div></section>
+<section id="dores"><h2>Mapa das dores</h2><p class="lead">As dificuldades do questionário e da análise do grupo, por tema. Toque em uma dor para ver o detalhe.</p>
+<div class="tabs" id="chips"></div><div class="dores" id="dores"></div></section>
+<section id="swot"><h2>Análise SWOT</h2><p class="lead">Cada item recebe o nível de importância definido no relatório. Toque em um quadrante para abrir ou fechar.</p>
+<div class="swot" id="swot"></div>
+<div class="card menta" style="margin-top:14px"><b>Conclusão do grupo:</b> a equipe coesa e o protagonismo do Grêmio são as forças centrais. Superar os desafios não depende de grandes investimentos, e sim de planejamento, organização, diálogo e do uso do que a escola já tem.</div><figure class="fig"><img src="assets/swot.jpg" alt="Slide da análise SWOT apresentado à escola" loading="lazy"><figcaption>🔍 Slide da análise SWOT apresentado à escola (toque para ampliar)</figcaption></figure></section>
+<section id="poder"><h2>Quem envolver: matriz de poder</h2><p class="lead">Cada público pede uma estratégia diferente, segundo seu poder e interesse no projeto.</p><div class="swot" id="pw"></div><figure class="fig"><img src="assets/poder.jpg" alt="Slide da matriz de poder apresentado à escola" loading="lazy"><figcaption>🔍 Slide da matriz de poder apresentado à escola (toque para ampliar)</figcaption></figure></section>
+<section id="prior"><h2>Matriz de prioridades</h2><p class="lead">Urgência e impacto de cada problema. Toque em uma bolinha para ver o detalhe.</p>
+<div style="position:relative"><span class="ay">Urgência →</span>
+<div class="mx" id="mx"><div class="q q1">Urgente, menor impacto</div><div class="q q2">Urgente, maior impacto</div><div class="q q3" style="align-self:end">Menos urgente, menor impacto</div><div class="q q4" style="align-self:end">Menos urgente, maior impacto</div></div>
+<div class="ax"><span>← Menor impacto</span><span>Maior impacto →</span></div></div>
+<div class="card" id="mxInfo" style="margin-top:14px"></div><figure class="fig"><img src="assets/prior.jpg" alt="Slide da matriz de prioridades apresentado à escola" loading="lazy"><figcaption>🔍 Slide da matriz de prioridades apresentado à escola (toque para ampliar)</figcaption></figure>
+<h2>Ordem de prioridade do relatório</h2><div class="rank" id="rank"></div>
+<div class="domino"><b>Efeito dominó:</b><span>Comunicação frágil</span><i>→</i><span>Menos participação</span><i>→</i><span>Planejamento e divulgação sem apoio</span><i>→</i><span>Menos envolvimento da comunidade</span></div></section>
+<section id="w"><h2>Planos de ação 5W2H</h2><p class="lead">Dois planos, para os dois problemas mais urgentes.</p><div class="tabs" id="wt"></div><div class="w" id="w5"></div><div class="figs"><figure class="fig"><img src="assets/w1.jpg" alt="Slide do plano 5W2H: Comunicação" loading="lazy"><figcaption>🔍 Slide do plano 5W2H: Comunicação (toque para ampliar)</figcaption></figure><figure class="fig"><img src="assets/w2.jpg" alt="Slide do plano 5W2H: Participação e Organização" loading="lazy"><figcaption>🔍 Slide do plano 5W2H: Participação e Organização (toque para ampliar)</figcaption></figure></div></section>
+<section id="kpi"><h2>Indicadores de desempenho (KPIs)</h2><p class="lead">Quatro indicadores para saber se a proposta deu certo.</p><div class="tabs" id="kt"></div><div class="kp" id="kb"></div><div class="figs"><figure class="fig"><img src="assets/kpi1.jpg" alt="Slide dos KPIs: Confirmação de leitura e Participação" loading="lazy"><figcaption>🔍 Slide dos KPIs: Confirmação de leitura e Participação (toque para ampliar)</figcaption></figure><figure class="fig"><img src="assets/kpi2.jpg" alt="Slide dos KPIs: Protagonismo (IPAE) e Cronograma" loading="lazy"><figcaption>🔍 Slide dos KPIs: Protagonismo (IPAE) e Cronograma (toque para ampliar)</figcaption></figure></div><figure class="fig"><img src="assets/acoes.jpg" alt="Slide das ações estratégicas de cada KPI" loading="lazy"><figcaption>🔍 Slide das ações estratégicas de cada KPI (toque para ampliar)</figcaption></figure></section>
+<section id="prop"><h2>Propostas do projeto</h2><p class="lead">As cinco propostas consolidadas. Todas partem dos recursos que a escola já possui.</p><div class="props" id="props"></div>
+<div class="obs"><h3>💬 Conclusão</h3><p>Mais do que resolver dificuldades, o projeto busca uma cultura de participação, autonomia e protagonismo: o aluno deixa de ser só receptor das ações da escola e passa a ajudar a construí-las.</p><p class="ex">Uma escola mais participativa, organizada e integrada à comunidade, com estudantes como agentes de sua transformação.</p></div></section>
+<div class="footer">Escola Estadual Heloíza Therezinha Murbach Lacava · Projeto de extensão FAM.</div>
+</div></div></div>
+<script>
+const $=s=>document.querySelector(s);
+const E=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+document.querySelectorAll('.nav').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n==a))}));
+// jornada
+const st=[
+{n:'Planejar',i:'🗓️',ok:['Planejamento coletivo: gestão, professores, funcionários e Grêmio','Painel físico com a agenda mensal'],bad:['Conciliar horários e demandas pedagógicas','Envolver todos os profissionais','Pouco tempo da equipe','Faltam responsáveis, prazos e recursos definidos']},
+{n:'Divulgar',i:'📣',ok:['WhatsApp por turma','Instagram da escola','Comunicados impressos, devolvidos assinados'],bad:['Divulgação com pouca antecedência','Recursos financeiros e materiais limitados']},
+{n:'Chegar à família',i:'📱',c:1,ok:['WhatsApp é o canal com melhor resultado: rápido e fica registrado'],bad:['Pais e responsáveis não leem as mensagens','Sem confirmação de leitura nem notificações','Dificuldade de internet e de letramento digital']},
+{n:'Participar',i:'🤝',ok:['Estudantes participam muito: eventos culturais, esportivos e Grêmio','Equipe e professores ajudam a organizar'],bad:['Baixa presença de pais em reuniões e eventos','Falta de tempo por causa do trabalho e do transporte','Pouca disponibilidade para ir à escola']}];
+function stage(k){document.querySelectorAll('.step').forEach((s,j)=>s.classList.toggle('on',j==k));const s=st[k];
+ $('#stageBody').innerHTML=`<div class="card menta"><h3>✅ O que funciona</h3><ul>${s.ok.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="card rosa"><h3>⚠️ Onde dói</h3><ul>${s.bad.map(x=>`<li>${x}</li>`).join('')}</ul></div>`}
+st.forEach((s,k)=>{const b=E('button','step secondary'+(s.c?' crit':''),`<b>${s.i}</b><span>${k+1}. ${s.n}</span>`);b.onclick=()=>stage(k);$('#steps').append(b)});stage(2);
+// dores
+const T={com:['Comunicação','#b24e7e','rosa'],par:['Participação','#6a58a8','lilas'],org:['Organização','#326f56','menta'],rec:['Recursos','#916a2e','pessego']};
+const D=[
+['com','Famílias não leem as mensagens','“Alguns pais e responsáveis não leem as mensagens enviadas pelos grupos de WhatsApp.”','Questionário'],
+['com','Sem confirmação de leitura nem notificações','A escola quer um canal institucional que confirme a leitura e acompanhe o recebimento. Sem isso, é difícil saber quais famílias ainda precisam ser contatadas.','Questionário e SWOT'],
+['com','Enviar não garante que foi lido e compreendido','O envio das mensagens, por si só, não assegura que sejam recebidas, lidas e compreendidas.','Relatório, SWOT'],
+['com','Internet e letramento digital','Muitos pais têm dificuldade com a internet, falta de letramento digital ou não conseguem ler os recados do WhatsApp.','Questionário e relatório'],
+['par','Baixa participação dos pais e responsáveis','É o público com maior dificuldade de participação em reuniões, eventos e projetos.','Questionário e SWOT'],
+['par','Famílias sem tempo','Jornadas de trabalho pesadas e longos trajetos no transporte afastam a família da escola.','Questionário e relatório'],
+['par','Pouca disponibilidade presencial','Baixa disponibilidade das famílias para participar presencialmente.','Questionário'],
+['org','Horários e demandas pedagógicas','Conciliar horários e demandas pedagógicas com a organização das ações.','Questionário'],
+['org','Difícil envolver todos no planejamento','Envolver todos os profissionais no planejamento das ações.','Questionário'],
+['org','Pouco tempo da equipe','Salários baixos e acúmulo de empregos deixam pouco tempo para atividades além da sala de aula.','Questionário e relatório'],
+['org','Divulgação sem antecedência','Falta divulgar com antecedência e definir responsabilidades, prazos e recursos.','Questionário e SWOT'],
+['org','Calendário engessado e regras que mudam','O calendário definido pelo Estado conflita com a rotina de professores e famílias, e as mudanças constantes de diretrizes atrapalham projetos de longo prazo.','Relatório (ameaças)'],
+['rec','Verbas escassas e burocracia nos repasses','Limitam a compra de ferramentas como um aplicativo de confirmação de leitura. A escola recorre com frequência ao comércio local.','Relatório (ameaças)'],
+['rec','Recursos financeiros e materiais limitados','Por isso a escola precisa diversificar canais e buscar parcerias com a comunidade.','Questionário']];
+function dores(f){const g=$('#dores');g.innerHTML='';D.filter(d=>f=='all'||d[0]==f).forEach(d=>{
+ const e=E('details','dor '+T[d[0]][2],`<summary><span><span class="tag">${T[d[0]][0]}</span><br>${d[1]}</span></summary><blockquote>${d[2]}</blockquote><small>Origem: ${d[3]}</small>`);e.style.setProperty('--tc',T[d[0]][1]);g.append(e)});
+ document.querySelectorAll('#chips button').forEach(c=>c.classList.toggle('on',c.dataset.f==f))}
+[['all','Todas ('+D.length+')'],...Object.entries(T).map(([k,v])=>[k,v[0]+' ('+D.filter(d=>d[0]==k).length+')'])].forEach(([k,t])=>{const b=E('button','',t);b.dataset.f=k;b.onclick=()=>dores(k);$('#chips').append(b)});dores('all');
+// swot: [texto, rótulo, nível a/m/b]
+const L={a:['alta','a'],m:['média','m'],b:['baixa','b']};
+const S=[['Forças','💪','menta','Interno',[
+['Comprometimento, coesão e trabalho colaborativo da equipe gestora, docentes e funcionários','a'],['Protagonismo dos estudantes, com destaque para o Grêmio Estudantil','a'],
+['Canais diversificados: WhatsApp por turma, Instagram e comunicados impressos assinados','m'],['Painel físico com a agenda mensal de atividades','m'],
+['Registros das ações: fotos, frequência e anotações da gestão e dos professores','b']]],
+['Fraquezas','🔧','rosa','Interno',[
+['Famílias não leem os comunicados e não há sistema para confirmar a leitura','Comunicação'],['Baixo envolvimento de pais e responsáveis em reuniões, eventos e projetos','Participação'],
+['Necessidade de planejar e divulgar as atividades com antecedência','Planejamento'],['Tempo limitado da equipe e tarefas sem distribuição organizada','Planejamento']]],
+['Oportunidades','🌱','lilas','Externo',[
+['Parcerias com empresas locais, universidades e instituições sociais','Parcerias'],['Ferramentas digitais para comunicar e organizar','Tecnologia'],
+['Eventos culturais, esportivos e campanhas solidárias','Integração'],['Cronogramas mensais antecipados, linguagem simples e horários flexíveis','Integração'],['Ampliar o protagonismo estudantil e as ações lideradas por alunos','Estudantes']]],
+['Ameaças','⛈️','pessego','Externo',[
+['Escassez de verbas e burocracia nos repasses públicos','a'],['Falta de tempo das famílias: jornadas pesadas e longos trajetos','a'],['Acesso limitado à internet e letramento digital','a'],
+['Mudanças em diretrizes curriculares e leis; calendário engessado','m'],['Salários baixos e acúmulo de empregos dos professores','m'],
+['Mudanças nos algoritmos do Instagram e infraestrutura urbana no entorno','b'],['Alta dos preços e pouca segurança e assistência social nos bairros','b']]]];
+S.forEach((s,k)=>{const li=s[4].map(x=>{const l=L[x[1]];const tg=l?`<span class="imp ${l[1]}">${l[0]}</span>`:`<span class="imp t">${x[1]}</span>`;return `<li>${tg}${x[0]}</li>`}).join('');
+ const b=E('button','sw '+s[2]+(k==0?' on':''),`<span class="n">${s[4].length}</span><h3>${s[1]} ${s[0]}</h3><small>${s[3]}</small><ul>${li}</ul>`);b.onclick=()=>b.classList.toggle('on');$('#swot').append(b)});
+// poder
+[['Manter satisfeitos','Poder alto, interesse baixo','Parceiros externos','Comunicar objetivos, necessidades e resultados, buscando apoio quando pertinente.','pessego'],
+['Gerenciar de perto','Poder alto, interesse alto','Gestão escolar e docentes','Alinhar decisões, recursos, calendário e monitoramento.','menta'],
+['Monitorar','Poder baixo, interesse baixo','Famílias e comunidade ampliada','Compartilhar informações essenciais e acompanhar demandas relevantes.','lilas'],
+['Manter informados','Poder baixo, interesse alto','Estudantes, Grêmio e famílias','Ampliar comunicação, escuta, participação e retorno das ações.','rosa']].forEach(p=>{
+ const e=E('div','sw on '+p[4],`<h3>${p[0]}</h3><small>${p[1]}</small><p style="margin:8px 0 4px"><b>${p[2]}</b></p><p style="margin:0;font-size:15px">${p[3]}</p>`);$('#pw').append(e)});
+// matriz
+const M=[{n:1,x:68,y:22,c:'#d96e9f',t:'Comunicação e confirmação de leitura',d:'Urgente e de maior impacto. Garante que os responsáveis recebam e compreendam as informações da escola.'},
+{n:2,x:84,y:40,c:'#4fa583',t:'Planejamento de atividades',d:'Urgente e de maior impacto. Pode melhorar com medidas simples: calendário mensal e avisos antecipados.'},
+{n:3,x:25,y:25,c:'#e0a35f',t:'Disponibilidade de equipe',d:'Urgente, de menor impacto. Garantir uma equipe mais presente e preparada.'},
+{n:4,x:25,y:74,c:'#8e78c8',t:'Participação familiar',d:'Menos urgente e de menor impacto nesta matriz. Aumentar o envolvimento das famílias.'},
+{n:5,x:75,y:74,c:'#5b9bd5',t:'Engajamento estudantil',d:'Menos urgente, de maior impacto. Incentivar a participação ativa dos alunos.'}];
+function mx(k){document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('on',j==k));const m=M[k];$('#mxInfo').innerHTML=`<h3 style="color:${m.c}">${m.n}. ${m.t}</h3><p style="margin:8px 0 0">${m.d}</p>`}
+M.forEach((m,k)=>{const b=E('button','dot',m.n);b.style.cssText=`left:${m.x}%;top:${m.y}%;--c:${m.c}`;b.setAttribute('aria-label',m.t);b.onclick=()=>mx(k);$('#mx').append(b)});mx(0);
+[['1º','Falhas na comunicação entre escola e famílias','Alta','Alto','É a base para que os responsáveis recebam e compreendam as informações.','rosa'],
+['2º','Baixa participação das famílias','Alta','Alto','Afeta o envolvimento dos responsáveis em reuniões, eventos e projetos.','lilas'],
+['3º','Falta de planejamento e divulgação antecipada','Média','Alto','Melhora com medidas simples, como calendário mensal e avisos antecipados.','menta']].forEach(r=>{
+ const e=E('div','card '+r[5],`<h3>${r[0]} ${r[1]}</h3><span class="badge">Urgência ${r[2]}</span><span class="badge n">Impacto ${r[3]}</span><p style="margin:4px 0 0;font-size:15px">${r[4]}</p>`);$('#rank').append(e)});
+// 5w2h
+const P=[['Comunicação entre escola e famílias',[
+['What','O quê','Plano de comunicação integrada, com calendário mensal, divulgação antecipada das atividades e reforço dos comunicados.'],
+['Why','Por quê','Melhorar o acesso às informações, aumentar a leitura e a confirmação de recebimento e incentivar a participação das famílias.'],
+['Where','Onde','WhatsApp por turma, Instagram, comunicados impressos e espaços físicos da escola.'],
+['When','Quando','Começa no próximo mês, com o calendário mensal. Comunicação e acompanhamento contínuos.'],
+['Who','Quem','Equipe gestora, secretaria e professores, com apoio do Grêmio e dos responsáveis pelos canais.'],
+['How','Como','Calendário mensal; datas e horários com antecedência; reforço no WhatsApp; lembretes no Instagram; impressos para quem tem dificuldade de internet; confirmação de recebimento.'],
+['How much','Quanto','Baixo custo, usando o que já existe. Estimativa de R$ 50 a R$ 100 por mês para impressões, se necessário (a validar).']]],
+['Participação e organização',[
+['What','O quê','Ações para incentivar a participação da comunidade na organização das atividades.'],
+['Why','Por quê','Incentivar a participação nos projetos, fortalecer o trabalho em equipe e melhorar a comunicação interna.'],
+['Where','Onde','Salas de aula, pátios e áreas de convivência.'],
+['When','Quando','No decorrer do próximo mês.'],
+['Who','Quem','Direção, coordenação pedagógica, professores, funcionários e alunos.'],
+['How','Como','Reuniões participativas, canais de comunicação, avisos, calendários e atividades coletivas.'],
+['How much','Quanto','R$ 150 no primeiro mês para papelaria, cartolinas, impressões e materiais de campanha. Reduzir com reaproveitamento, divulgação digital e doações.']]]];
+function plano(k){document.querySelectorAll('#wt button').forEach((c,j)=>c.classList.toggle('on',j==k));$('#w5').innerHTML=P[k][1].map(w=>`<div class="card ${w[0]=='How much'?'pessego':'menta'}"><h3>${w[0]}<small>${w[1]}</small></h3><p>${w[2]}</p></div>`).join('')}
+P.forEach((p,k)=>{const b=E('button','',p[0]);b.onclick=()=>plano(k);$('#wt').append(b)});plano(0);
+// kpis
+const K=[{n:'Confirmação de leitura',f:['Comunicados com leitura confirmada','Total de comunicados enviados'],m:'>90%',mt:'índice de comunicação eficiente, físico e digital',p:'Mensal, com acompanhamento diário dos comunicados.',a:['Linguagem simples, acessível e objetiva','Mecanismos de confirmação: formulários, enquetes, assinaturas, respostas no WhatsApp','Canal para tirar dúvidas','Buscar quem ainda não confirmou','Monitorar as taxas, físicas e digitais'],i:['Percentual de leitura confirmada','Taxa de confirmação por canal','Tempo médio para confirmar','Esclarecimento de dúvidas'],o:'Confirmar a leitura não garante que a informação foi compreendida. Por isso o canal de dúvidas é essencial.'},
+{n:'Participação e engajamento',f:['Responsáveis participantes','Responsáveis convidados'],m:'+80%',mt:'de alcance e participação em relação a eventos anteriores',p:'Trimestral, comparando os períodos e, no geral, ano a ano.',a:['Divulgar eventos com antecedência','Horários alternativos, mais fáceis para as famílias','Registrar a frequência e comparar horários','Palestras, oficinas e atividades interativas','Pesquisas de satisfação para achar barreiras'],i:['Taxa de presença em reuniões','Índice de sucesso e satisfação dos eventos','% de participação efetiva em projetos','Taxa de adesão da comunidade'],o:'O foco vai além da presença: conta também o envolvimento e a participação efetiva.'},
+{n:'Protagonismo estudantil (IPAE)',f:['Ações com participação ativa dos estudantes protagonistas','Total de ações realizadas no período'],m:'+50%',mt:'de participação dos alunos protagonistas nas ações de comunicação e campanhas',p:'Trimestral, conforme campanhas e eventos do ano letivo.',a:['Estimular ideias e propostas dos próprios estudantes','Promover a liderança estudantil','Planejar com o calendário mensal: prazos, responsáveis e recursos'],i:['% de participação nas campanhas','Comparação entre campanhas','Autoavaliação da autonomia','Crescimento da participação entre períodos'],o:'Os números ajudam a acompanhar, mas a autonomia depende de oportunidades reais de escuta e decisão.'},
+{n:'Aderência ao cronograma',f:['Atividades realizadas dentro do prazo','Total de atividades previstas no cronograma'],m:'≥95%',mt:'de aderência ao cronograma escolar, com registro de atrasos e reprogramações',p:'Durante o ano letivo, alinhado ao calendário da Secretaria de Educação.',a:['Atualizar o painel mensal (pode usar um canvas)','Prazos para divulgação antecipada','Controlar o que está em andamento, concluído ou atrasado','Reorganizar diante de imprevistos, sem cancelar','Comparar mensalmente o planejado e o executado'],i:['Taxa de aderência ao cronograma','Taxa de divulgação antecipada','Taxa de atrasos e suas resoluções','Taxa de reprogramações'],o:'Atrasos são registrados para correção, e o cronograma é atualizado conforme as demandas.'}];
+function kpi(k){document.querySelectorAll('#kt button').forEach((c,j)=>c.classList.toggle('on',j==k));const x=K[k];
+ $('#kb').innerHTML=`<div class="card rosa"><div class="big">${x.m}</div><p class="ex">${x.mt}</p><div class="formula">${x.f[0]}<hr>${x.f[1]}<br>× 100</div><h3 style="margin-top:14px">Periodicidade</h3><p>${x.p}</p><p class="ex"><b>Atenção:</b> ${x.o}</p></div>
+ <div class="card"><h3>Ações estratégicas</h3><ul>${x.a.map(i=>`<li>${i}</li>`).join('')}</ul><h3 style="margin-top:14px">Indicadores de acompanhamento</h3><ul>${x.i.map(i=>`<li>${i}</li>`).join('')}</ul></div>`}
+K.forEach((x,k)=>{const b=E('button','',x.n);b.onclick=()=>kpi(k);$('#kt').append(b)});kpi(0);
+// propostas
+[['1','Aprimorar a comunicação com as famílias','Usar os canais atuais com calendário mensal, divulgação antecipada, linguagem simples e confirmação de recebimento. Oferecer alternativas a quem tem dificuldade de internet.','rosa'],
+['2','Incentivar a participação e a integração','Reuniões participativas, campanhas de conscientização, atividades coletivas, eventos culturais e sociais e espaços para sugestões.','lilas'],
+['3','Fortalecer o protagonismo estudantil','Alunos como idealizadores e organizadores: valorizar o Grêmio, abrir espaço para ideias, campanhas sociais e culturais e participação na divulgação, respeitando as faixas do Fundamental e do Médio.','blue'],
+['4','Organizar e acompanhar o planejamento','Cronograma mensal com datas, prazos, responsáveis e recursos, divulgado antes, com acompanhamento de atrasos e ajustes conforme a equipe.','menta'],
+['5','Desenvolver parcerias externas','Universidades, empresas locais e instituições sociais para palestras, oficinas, campanhas e projetos, ampliando as oportunidades dos estudantes.','pessego']].forEach(p=>{
+ const e=E('details','dor '+T[d[0]][2],`<summary><span><span class="tag">Proposta ${p[0]}</span><br>${p[1]}</span></summary><blockquote>${p[2]}</blockquote>`);$('#props').append(e)});
+document.addEventListener('click',e=>{const i=e.target.closest('.fig img');if(!i)return;
+ const z=E('div','zoom',`<button>Fechar ✕</button><img src="${i.src}" alt="${i.alt}">`);z.onclick=()=>z.remove();document.body.append(z)});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+</script>
+</body>
+</html>
